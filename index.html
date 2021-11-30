@@ -23,9 +23,9 @@
     </div>
     <script>
       function sumar() {
-        let operandoA = document.getElementById("operandoA");
-        let operandoB = document.getElementById("operandoB");
-        let resultado = parseFloat(operandoA.value) + parseFloat(operandoB.value);
+        var operandoA = document.getElementById("operandoA");
+        var operandoB = document.getElementById("operandoB");
+        var resultado = parseFloat(operandoA.value) + parseFloat(operandoB.value);
         resultado = resultado.toFixed(4);
         if(isNaN(resultado)) {
           resultado = "Entrada no válida!";
@@ -34,9 +34,9 @@
         console.log("El resultado es: " + resultado);
       }
       function restar() {
-        let operandoA = document.getElementById("operandoA");
-        let operandoB = document.getElementById("operandoB");
-        let resultado = parseFloat(operandoA.value) - parseFloat(operandoB.value);
+        var operandoA = document.getElementById("operandoA");
+        var operandoB = document.getElementById("operandoB");
+        var resultado = parseFloat(operandoA.value) - parseFloat(operandoB.value);
         resultado = resultado.toFixed(4);
         if(isNaN(resultado)) {
           resultado = "Entrada no válida!";
@@ -45,9 +45,9 @@
         console.log("El resultado es: " + resultado);
       }
       function multiplicar() {
-        let operandoA = document.getElementById("operandoA");
-        let operandoB = document.getElementById("operandoB");
-        let resultado = parseFloat(operandoA.value) * parseFloat(operandoB.value);
+        var operandoA = document.getElementById("operandoA");
+        var operandoB = document.getElementById("operandoB");
+        var resultado = parseFloat(operandoA.value) * parseFloat(operandoB.value);
         resultado = resultado.toFixed(4);
         if(isNaN(resultado)) {
           resultado = "Entrada no válida!";
@@ -56,11 +56,11 @@
         console.log("El resultado es: " + resultado);
       }
       function dividir() {
-        let operandoA = document.getElementById("operandoA");
-        let operandoB = document.getElementById("operandoB");
-        let resultado = parseFloat(operandoA.value) / parseFloat(operandoB.value);
+        var operandoA = document.getElementById("operandoA");
+        var operandoB = document.getElementById("operandoB");
+        var resultado = parseFloat(operandoA.value) / parseFloat(operandoB.value);
         resultado = resultado.toFixed(4);
-        if(isNaN(resultado)) {
+        if(isNaN(resultado) || parseFloat(operandoB.value) === 0) {
           resultado = "Entrada no válida!";
         }
         document.getElementById("contenedor").innerHTML = "El resultado es: " + resultado;
